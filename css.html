@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        /* Form Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            border: 3px solid #8ebf42;
+            margin-bottom: 20px;
+        }
+
+        fieldset {
+            border: 3px solid #bf305d;
+            border-width: 2px 4px 6px 8px; /* Top, Right, Bottom, Left */
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-size: 1.2rem;
+            color: #bf305d;
+        }
+
+        label {
+            font-size: 1rem;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input[type="text"], input[type="number"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="radio"], input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            width: 48%;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #bf305d;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover {
+            background-color: #a8284c;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+
+        /* Styling for audio and video */
+        .media-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        h4 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 600px) {
+            form {
+                width: 90%;
+                padding: 15px;
+            }
+
+            input[type="submit"], input[type="reset"] {
+                width: 100%;
+                margin-top: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Registration Form</h1>
+
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Complete Registration Form</legend>
+
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name">
+
+            <label for="phone">Phone Number:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label><br><br>
+
+            <label>Courses Offered:</label><br>
+            <input type="checkbox" id="java" name="course" value="Java Full Stack">
+            <label for="java">Java Full Stack</label><br>
+            <input type="checkbox" id="python" name="course" value="Python Full Stack">
+            <label for="python">Python Full Stack</label><br>
+            <input type="checkbox" id="ai" name="course" value="Artificial Intelligence & Machine Learning">
+            <label for="ai">Artificial Intelligence & Machine Learning</label><br>
+            <input type="checkbox" id="data-science" name="course" value="Data Science using Python">
+            <label for="data-science">Data Science using Python</label><br>
+            <input type="checkbox" id="web-development" name="course" value="Web Development">
+            <label for="web-development">Web Development</label><br>
+            <input type="checkbox" id="cloud-computing" name="course" value="Cloud Computing">
+            <label for="cloud-computing">Cloud Computing</label><br>
+            <input type="checkbox" id="cyber-security" name="course" value="Cyber Security">
+            <label for="cyber-security">Cyber Security</label><br><br>
+
+            <label for="aadhaar">Aadhaar Card:</label>
+            <input type="file" id="aadhaar" name="aadhaar" accept=".pdf,.jpg,.jpeg,.png">
+
+            <label for="country">Your Residential Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select your country</option>
+                <option value="india">India</option>
+                <option value="dubai">Dubai</option>
+                <option value="saudi-arabia">Saudi Arabia</option>
+                <option value="turkey">Turkey</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+            </select>
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <div class="media-section">
+        <h4>Audio Instructions for Filling the Form:</h4>
+        <audio controls>
+            <source src="romantic-240213.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <h4>Video Tutorial on How to Fill the Form:</h4>
+        <video controls width="300" height="200">
+            <source src="mixkit-52237-video-52237-hd-ready.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </div>
+
+</body>
+</html>
