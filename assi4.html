@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Layout and Display */
+.container {
+    width: 50%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+    width: 100%;
+    padding: 20px;
+    border: 3px solid #bf305d;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+/* Text Properties */
+h2 {
+    color: #bf305d;
+    text-align: center;
+    font-family: 'Times New Roman', serif;
+    font-size: 24px;
+    text-shadow: 2px 2px blue;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin: 10px 0 5px;
+}
+
+/* Color and Border */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid rgba(205, 100, 10, 0.9);
+    border-radius: 5px;
+    color: #333;
+}
+
+/* Smaller boxes for specific fields */
+input.smaller-field {
+    width: 80%; /* Adjust the width as needed */
+}
+
+/* Outline */
+input:focus, select:focus {
+    outline: dashed 3px blue;
+    outline-offset: 5px;
+}
+
+/* Submit Button */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #bf305d;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+/* Padding and Margin */
+button:hover {
+    background-color: #a02d4f;
+}
+
+input, select {
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+/* Align radio buttons inline */
+.radio-group {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px; /* Space between radio buttons */
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 5px;
+}
+</style>
+<body>
+    <div class="container">
+        <form action="#" id="registrationForm">
+            <h2 id="form-title">Registration Form</h2>
+
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" class="smaller-field" required>
+
+            <label for="mname">Middle Name:</label>
+            <input type="text" id="mname" name="mname" class="smaller-field">
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" class="smaller-field" required>
+
+            
+            <label for="mob">Mobile Number:</label>
+            <input type="tel" id="mob" name="mob" class="smaller-field" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="smaller-field" required>
+
+            <label>Gender:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+                
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <label for="course">Course Offered:</label>
+            <select id="course" name="course">
+                <option value="btech">B.Tech</option>
+                <option value="bsc">B.Sc</option>
+                <option value="bcom">B.Com</option>
+                <option value="ba">B.A</option>
+            </select>
+
+            <label for="id_card">Add ID Card:</label>
+            <input type="file" id="id_card" name="id_card">
+
+            <label for="country">Residential Country:</label>
+            <select id="country" name="country" required>
+                <option value="india">India</option>
+                <option value="usa">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="canada">Canada</option>
+                <option value="australia">Australia</option>
+            </select>
+
+            <button type="submit" id="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
